@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Ribbon Breakdown Rescue | Regional Transport</title>
+    <meta name="description" content="Emergency and scheduled transport from Brisbane across regional Queensland and New South Wales. View Blue Ribbon Breakdown Rescue capabilities and rates.">
+    <link rel="canonical" href="https://timetoenter61-lab.github.io/regional-deliveries/">
+    <meta name="theme-color" content="#0A2540">
+    <style>
+        :root {
+            --primary-blue: #0A2540;
+            --accent-gold: #D4AF37;
+            --light-bg: #F4F6F8;
+            --dark-text: #333333;
+            --white: #FFFFFF;
+            --soft-blue: #EAF2FF;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; }
+
+        .container {
+            width: min(90%, 1200px);
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            padding: 20px 0;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-weight: 700;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d2c50 0%, #123a60 40%, #1a5a8d 100%);
+            color: var(--white);
+            padding: 70px 0 80px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            padding: 8px 14px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 4vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            max-width: 620px;
+            margin-bottom: 24px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.7);
+            color: var(--white);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .stat-box strong {
+            display: block;
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+        }
+
+        main {
+            padding: 40px 0 70px;
+        }
+
+        .section {
+            margin-bottom: 42px;
+        }
+
+        .section h3 {
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .card h4 {
+            margin: 0 0 10px;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--dark-text);
+        }
+
+        .highlight {
+            background: var(--soft-blue);
+            border-left: 6px solid var(--primary-blue);
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .mini-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        }
+
+        .mini-item strong {
+            display: block;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue), #153c64);
+            color: var(--white);
+            padding: 28px 24px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .cta-banner h3 {
+            margin: 0 0 10px;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+
+        .cta-banner a {
+            display: inline-block;
+            margin-top: 16px;
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 28px 0;
+            border-top: 4px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        @media (max-width: 820px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero {
+                padding-top: 52px;
+                padding-bottom: 60px;
+            }
+
+            .cta-row {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="logo">
+                <h1>Blue Ute <span>transport to Regional Queensland and New South Wales</span></h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="rates.html">Capability & Rates</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="eyebrow">Transport Services</div>
+                <h2>Emergency or Scheduled Transport Across Regional Queensland and New South Wales</h2>
+                <p>Secure, reliable delivery for machinery, parts, and commercial cargo, with Brisbane-based dispatch across regional Queensland and New South Wales.</p>
+                <div class="cta-row">
+                    <a href="rates.html" class="btn btn-primary">View Rates</a>
+                    <a href="tel:+61455345728" class="btn btn-secondary">Call 0455 345 728</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="stat-box">
+                    <strong>DOOR TO DOOR </strong>
+                    Single loads up to 500 kg; mixed loads accepted up to 600 kg.
+                </div>
+                <div class="stat-box">
+                    <strong>Brisbane</strong>
+                    Dispatch base for regional trips
+                </div>
+                <div class="stat-box">
+                    <strong>ORGANISE A RETURN LOAD</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h3>What we do</h3>
+                <div class="cards">
+                    <div class="card">
+                        <h4>Emergency Transport</h4>
+                        <p>Fast, secure movement of machinery, parts, and high-value assets when delays are not an option.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Regional Dispatch</h4>
+                        <p>Reliable scheduling across mining, construction, agricultural, and industrial regions.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Site Ready Handling</h4>
+                        <p>Commercially equipped operators and safety systems for secure loading and transit support.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Why clients choose us</h3>
+                <div class="highlight">
+                    <p>We combine rapid response with practical safety and compliance. Every mission is tailored around asset protection, timing pressure, and site requirements.</p>
+                </div>
+                <div class="mini-grid">
+                    <div class="mini-item">
+                        <strong>Secure transport</strong>
+                        Lockable canopy and rated tie-down protection for critical cargo.
+                    </div>
+                    <div class="mini-item">
+                        <strong>Licensed operators</strong>
+                        Site-ready forklift capability and consistent safety oversight.Note : our staff do not carry out manual handling tasks on delivery.
+                    </div>
+                    <div class="mini-item">
+                        <strong>Transparent pricing</strong>
+                        Clear per-km structures with no surprise costs for standard jobs.
+                    </div>
+                    <div class="mini-item">
+                        <strong>Insurance backed</strong>
+                        Public liability and transit cover to support commercial requirements.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="cta-banner">
+                    <h3>Need a reliable breakdown rescue solution?</h3>
+                    <p>Speak with the team about your next mission, quote, or regional timing requirement.</p>
+                    <a href="rates.html">See capability and rates</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Blue Ribbon Breakdown Rescue • Brisbane Based • Regional Service • 24/7 Support</p>
+        </div>
+    </footer>
+</body>
+</html>
